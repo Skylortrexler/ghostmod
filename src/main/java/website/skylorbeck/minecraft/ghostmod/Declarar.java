@@ -12,5 +12,5 @@ import net.minecraft.util.registry.Registry;
 public class Declarar {
     public static Item ghostmode = new Item(new FabricItemSettings().maxCount(1).group(ItemGroup.MISC));
     public static Potion visiblepotion = Registry.register(Registry.POTION, "visibility", new Potion(
-            new StatusEffectInstance(StatusEffects.GLOWING, 9600)));
+            new StatusEffectInstance(StatusEffects.GLOWING, 2400)));
 }
