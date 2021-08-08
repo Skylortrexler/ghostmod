@@ -44,7 +44,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         if (this.inventory.contains(Declarar.ghostmode.getDefaultStack())){
             this.abilities.flying = true;
             this.abilities.allowFlying = true;
-            this.abilities.setFlySpeed(0.2f);
+            this.abilities.setFlySpeed(0.1f);
             return true;
         }
         this.abilities.flying = false;
