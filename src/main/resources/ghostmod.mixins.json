@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "website.skylorbeck.minecraft.ghostmod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "PlayerEntityMixin",
+    "setPoseAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

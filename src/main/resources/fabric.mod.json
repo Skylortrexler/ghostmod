@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "ghostmod",
+  "version": "1.0.0",
+  "name": "Ghostmod",
+  "description": "a ghost mod made for tbnrfarish",
+  "authors": [
+    "SkylorBeck"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/ghostmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "website.skylorbeck.minecraft.ghostmod.client.GhostmodClient"
+    ],
+    "main": [
+      "website.skylorbeck.minecraft.ghostmod.Ghostmod"
+    ]
+  },
+  "mixins": [
+    "ghostmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}
