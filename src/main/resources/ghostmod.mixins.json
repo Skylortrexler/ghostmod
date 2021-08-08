@@ -4,6 +4,7 @@
   "package": "website.skylorbeck.minecraft.ghostmod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "OtherPlayerEntityMixin",
     "PlayerEntityMixin",
     "setPoseAccessor"
   ],

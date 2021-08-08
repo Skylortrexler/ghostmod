@@ -8,6 +8,7 @@ public class Registrar {
 
     public static void register(){
         regItem("ghostmode",Declarar.ghostmode);
+        regItem("invisibleghostmode",Declarar.invisibleghostmode);
     }
 
     public static void regItem(String name, Item itemid){

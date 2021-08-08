@@ -34,10 +34,21 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     public void updateFlyingPose(CallbackInfo ci){
             if (this.inventory.contains(Declarar.ghostmode.getDefaultStack())){
                 if (this.forwardSpeed>=0.25 || this.sidewaysSpeed >=0.25 || this.sidewaysSpeed <=-0.25) {
-                    ((setPoseAccessor) this).setPoseInvoker(EntityPose.FALL_FLYING);
+                    ((setPoseAccessor) this).setPoseInvoker(EntityPose.SWIMMING);
+//                    this.setSwimming(true);
                     ci.cancel();
                 }
             }
+    }
+    @Inject(at = @At("HEAD"), method = "updateSwimming", cancellable = true)
+    public void injectUpdateSwimming(CallbackInfo ci){
+        if (this.inventory.contains(Declarar.ghostmode.getDefaultStack())){
+            if (this.forwardSpeed>=0.25 || this.sidewaysSpeed >=0.25 || this.sidewaysSpeed <=-0.25) {
+                ((setPoseAccessor) this).setPoseInvoker(EntityPose.SWIMMING);
+                this.setSwimming(true);
+                ci.cancel();
+            }
+        }
     }
     @Redirect(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;isSpectator()Z"), method = "tick")
     public boolean injectedTick(PlayerEntity playerEntity){

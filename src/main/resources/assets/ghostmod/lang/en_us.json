@@ -3,5 +3,6 @@
   "item.minecraft.splash_potion.effect.visibility": "Splash Potion of Visibility",
   "item.minecraft.tipped_arrow.effect.visibility": "Arrow of Visibility",
   "item.minecraft.lingering_potion.effect.visibility": "Lingering Potion of Visibility",
-  "item.ghostmod.ghostmode": "Ghost Soul"
+  "item.ghostmod.ghostmode": "Ghost Soul",
+  "item.ghostmod.invisibleghostmode": ""
 }
