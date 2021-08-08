@@ -32,7 +32,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Inject(at = @At("HEAD"), method = "updatePose", cancellable = true)
     public void updateFlyingPose(CallbackInfo ci){
-            if (this.inventory.contains(Declarar.ghostmode.getDefaultStack())){
+            if (this.inventory.contains(Declarar.ghostmode.getDefaultStack()) || this.inventory.contains(Declarar.invisibleghostmode.getDefaultStack())){
                 if (this.forwardSpeed>=0.25 || this.sidewaysSpeed >=0.25 || this.sidewaysSpeed <=-0.25) {
                     ((setPoseAccessor) this).setPoseInvoker(EntityPose.SWIMMING);
 //                    this.setSwimming(true);
@@ -42,7 +42,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     }
     @Inject(at = @At("HEAD"), method = "updateSwimming", cancellable = true)
     public void injectUpdateSwimming(CallbackInfo ci){
-        if (this.inventory.contains(Declarar.ghostmode.getDefaultStack())){
+        if (this.inventory.contains(Declarar.ghostmode.getDefaultStack()) || this.inventory.contains(Declarar.invisibleghostmode.getDefaultStack())){
             if (this.forwardSpeed>=0.25 || this.sidewaysSpeed >=0.25 || this.sidewaysSpeed <=-0.25) {
                 ((setPoseAccessor) this).setPoseInvoker(EntityPose.SWIMMING);
                 this.setSwimming(true);
@@ -52,7 +52,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     }
     @Redirect(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;isSpectator()Z"), method = "tick")
     public boolean injectedTick(PlayerEntity playerEntity){
-        if (this.inventory.contains(Declarar.ghostmode.getDefaultStack())){
+        if (this.inventory.contains(Declarar.ghostmode.getDefaultStack()) || this.inventory.contains(Declarar.invisibleghostmode.getDefaultStack())){
             this.abilities.flying = true;
             this.abilities.allowFlying = true;
             this.abilities.setFlySpeed(0.1f);

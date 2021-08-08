@@ -34,7 +34,7 @@ public abstract class OtherPlayerEntityMixin extends AbstractClientPlayerEntity 
 
     @Inject(at = @At("HEAD"), method = "updatePose", cancellable = true)
     public void updateFlyingPose(CallbackInfo ci){
-        if (this.getOffHandStack().isOf(Declarar.ghostmode) || this.getMainHandStack().isOf(Declarar.ghostmode)){
+        if (this.getOffHandStack().isOf(Declarar.ghostmode) || this.getMainHandStack().isOf(Declarar.ghostmode)|| this.getOffHandStack().isOf(Declarar.invisibleghostmode) || this.getMainHandStack().isOf(Declarar.invisibleghostmode)){
                 ((setPoseAccessor) this).setPoseInvoker(EntityPose.SWIMMING);
             } else {
                 ((setPoseAccessor) this).setPoseInvoker(EntityPose.STANDING);
