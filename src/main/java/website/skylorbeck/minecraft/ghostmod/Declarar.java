@@ -17,6 +17,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import website.skylorbeck.minecraft.ghostmod.entities.*;
 
 
 public class Declarar {
@@ -25,19 +26,19 @@ public class Declarar {
     public static Potion visiblepotion = Registry.register(Registry.POTION, "visibility", new Potion(
             new StatusEffectInstance(StatusEffects.GLOWING, 2400)));
 
-    public static final EntityType<CreeperEntity> GHOSTCREEP = regEntity("ghostcreep", CreeperEntity::new, SpawnGroup.MONSTER,0.6f,1.7f,8);
+    public static final EntityType<GhostCreeperEntity> GHOSTCREEP = regEntity("ghostcreep", GhostCreeperEntity::new, SpawnGroup.MONSTER,0.6f,1.7f,8);
     public static final Item GHOSTCREEPEGG = new SpawnEggItem(GHOSTCREEP, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
-    public static final EntityType<EndermanEntity> GHOSTENDERMAN = regEntity("ghostenderman", EndermanEntity::new, SpawnGroup.MONSTER,0.6F, 2.9F, 8);
+    public static final EntityType<GhostEndermanEntity> GHOSTENDERMAN = regEntity("ghostenderman", GhostEndermanEntity::new, SpawnGroup.MONSTER,0.6F, 2.9F, 8);
     public static final Item GHOSTENDERMANEGG = new SpawnEggItem(GHOSTENDERMAN, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
-    public static final EntityType<SkeletonEntity> GHOSTSKELETON = regEntity("ghostskeleton", SkeletonEntity::new, SpawnGroup.MONSTER,0.6F, 1.99F, 8);
+    public static final EntityType<GhostSkeletonEntity> GHOSTSKELETON = regEntity("ghostskeleton", GhostSkeletonEntity::new, SpawnGroup.MONSTER,0.6F, 1.99F, 8);
     public static final Item GHOSTSKELETONEGG = new SpawnEggItem(GHOSTSKELETON, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
-    public static final EntityType<SpiderEntity> GHOSTSPIDER = regEntity("ghostspider", SpiderEntity::new, SpawnGroup.MONSTER,1.4F, 0.9F, 8);
+    public static final EntityType<GhostSpiderEntity> GHOSTSPIDER = regEntity("ghostspider", GhostSpiderEntity::new, SpawnGroup.MONSTER,1.4F, 0.9F, 8);
     public static final Item GHOSTSPIDEREGG = new SpawnEggItem(GHOSTSPIDER, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
-    public static final EntityType<ZombieEntity> GHOSTZOMBIE = regEntity("ghostzombie", ZombieEntity::new, SpawnGroup.MONSTER,0.6F, 1.95F, 8);
+    public static final EntityType<GhostZombieEntity> GHOSTZOMBIE = regEntity("ghostzombie", GhostZombieEntity::new, SpawnGroup.MONSTER,0.6F, 1.95F, 8);
     public static final Item GHOSTZOMBIEEGG = new SpawnEggItem(GHOSTZOMBIE, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
-    public static final EntityType<ZombieVillagerEntity> GHOSTZOMBIEVILLAGER = regEntity("ghostzombievillager", ZombieVillagerEntity::new, SpawnGroup.MONSTER,0.6F, 1.95F, 8);
+    public static final EntityType<GhostZombieVillagerEntity> GHOSTZOMBIEVILLAGER = regEntity("ghostzombievillager", GhostZombieVillagerEntity::new, SpawnGroup.MONSTER,0.6F, 1.95F, 8);
     public static final Item GHOSTZOMBIEVILLAGEREGG = new SpawnEggItem(GHOSTZOMBIEVILLAGER, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
-    public static final EntityType<WitchEntity> GHOSTWITCH = regEntity("ghostwitch", WitchEntity::new, SpawnGroup.MONSTER,0.6F, 1.95F, 8);
+    public static final EntityType<GhostWitchEntity> GHOSTWITCH = regEntity("ghostwitch",GhostWitchEntity::new, SpawnGroup.MONSTER,0.6F, 1.95F, 8);
     public static final Item GHOSTWITCHEGG = new SpawnEggItem(GHOSTWITCH, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));
 
 
