@@ -4,5 +4,14 @@
   "item.minecraft.tipped_arrow.effect.visibility": "Arrow of Visibility",
   "item.minecraft.lingering_potion.effect.visibility": "Lingering Potion of Visibility",
   "item.ghostmod.ghostmode": "Ghost Soul",
-  "item.ghostmod.invisibleghostmode": ""
+  "item.ghostmod.invisibleghostmode": "",
+  "category.ghostmod": "Ghostmod",
+  "key.ghostmod.zap": "Summon Lightning",
+  "item.ghostmod.ghostcreepegg": "Ghost Creeper Spawn Egg",
+  "item.ghostmod.ghostwitchegg": "Ghost Witch Spawn Egg",
+  "item.ghostmod.ghostskeletonegg": "Ghost Skeleton Spawn Egg",
+  "item.ghostmod.ghostspideregg": "Ghost Spider Spawn Egg",
+  "item.ghostmod.ghostzombieegg": "Ghost Zombie Spawn Egg",
+  "item.ghostmod.ghostzombievillageregg": "Ghost Zombie Villager Spawn Egg",
+  "item.ghostmod.ghostendermanegg": "Ghost Enderman Spawn Egg"
 }

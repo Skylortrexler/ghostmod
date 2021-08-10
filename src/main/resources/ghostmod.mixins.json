@@ -6,7 +6,8 @@
   "mixins": [
     "OtherPlayerEntityMixin",
     "PlayerEntityMixin",
-    "setPoseAccessor"
+    "setPoseAccessor",
+    "targetingMixin"
   ],
   "client": [
   ],
