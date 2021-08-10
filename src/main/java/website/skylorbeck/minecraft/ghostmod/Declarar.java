@@ -10,12 +10,10 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.PotionItem;
-import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.*;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import website.skylorbeck.minecraft.ghostmod.entities.*;
 
@@ -25,6 +23,7 @@ public class Declarar {
     public static Item invisibleghostmode = new Item(new FabricItemSettings().maxCount(1).group(ItemGroup.MISC));
     public static Potion visiblepotion = Registry.register(Registry.POTION, "visibility", new Potion(
             new StatusEffectInstance(StatusEffects.GLOWING, 2400)));
+    public static Item antidote = new AntidoteItem(new FabricItemSettings().rarity(Rarity.EPIC).group(ItemGroup.FOOD).food(new FoodComponent.Builder().alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS,600,1),1f).build()));
 
     public static final EntityType<GhostCreeperEntity> GHOSTCREEP = regEntity("ghostcreep", GhostCreeperEntity::new, SpawnGroup.MONSTER,0.6f,1.7f,8);
     public static final Item GHOSTCREEPEGG = new SpawnEggItem(GHOSTCREEP, 12895428, 11382189, new Item.Settings().group(ItemGroup.MISC));

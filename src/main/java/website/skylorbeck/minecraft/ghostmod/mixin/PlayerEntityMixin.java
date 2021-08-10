@@ -62,12 +62,14 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         this.abilities.allowFlying = false;
         return false;
     }
+
     @Inject(at = @At("HEAD"), method = "attack", cancellable = true)
     public void injectedAttack(Entity target, CallbackInfo ci){
         if (!this.getStackInHand(Hand.MAIN_HAND).hasEnchantments() && target.isPlayer()){
             ci.cancel();
         }
     }
+
     @Inject(at = @At("HEAD"), method = "damage", cancellable = true)
     public void injectedDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
         if (source.getSource()!=null && source.getSource().isPlayer()) {
